@@ -130,7 +130,7 @@ class Chess
         $position = $tokens[0];
         $square = 0;
         for ($i = 0, $iMax = strlen($position); $i < $iMax; ++$i) {
-            $piece = $position{$i};
+            $piece = substr($position, $i, 1);
             if ($piece === '/') {
                 $square += 8;
             } elseif (ctype_digit($piece)) {
